@@ -69,6 +69,70 @@ footer{text-align:center;color:#a17d8d;padding:26px 15px;font-size:.83rem;backgr
 #toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#30232b;color:white;padding:11px 17px;border-radius:30px;opacity:0;transition:.25s;pointer-events:none;z-index:20}
 #toast.show{opacity:1}
 @media(max-width:480px){.passrow{flex-direction:column}.topline{align-items:flex-start}.topline .btn{padding:10px 13px}main{padding-left:13px;padding-right:13px}.month{padding:13px}.extra-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Minnie-inspired birthday scrapbook deluxe styling */
+:root{--ink:#261820;--pink:#f3a0c0;--pink-deep:#d72e70;--blush:#fff0f6;--cream:#fff9f6;--red:#d82f5f;--line:#efb5ce}
+body{background:radial-gradient(circle at 8% 10%,#ffe1ec 0 3px,transparent 4px),radial-gradient(circle at 92% 28%,#f8c3d7 0 4px,transparent 5px),linear-gradient(180deg,#fff7fa,#fffaf7 40%,#fff0f5);background-size:90px 90px,130px 130px,auto;background-attachment:fixed}
+.hero{padding:58px 18px 55px;background:radial-gradient(circle at 15% 25%,#fff 0 5px,transparent 6px),radial-gradient(circle at 82% 70%,#fff 0 6px,transparent 7px),linear-gradient(135deg,#ffdce9,#f5a9c8 48%,#ffeaf2);background-size:38px 38px,52px 52px,auto;box-shadow:inset 0 -12px 25px #b83c6815}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:24px;background:radial-gradient(ellipse at 50% 0,#fff9 0 45%,transparent 48%);background-size:34px 24px}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);text-shadow:0 3px 0 #fff,0 9px 18px #9e315033}
+.hero-mouse-deco{height:44px;display:flex;align-items:center;justify-content:center;gap:4px;margin:14px auto 8px;color:#242024;filter:drop-shadow(0 5px 3px #7e244533)}
+.hero-mouse-deco span{display:block;width:33px;height:33px;border-radius:50%;background:#282128;border:3px solid #fff}
+.hero-mouse-deco b{display:grid;place-items:center;width:52px;height:42px;border-radius:48% 48% 45% 45%;background:#282128;color:#ed4d88;border:3px solid white;font-size:20px;margin:0 -4px;position:relative}
+.hero-mouse-deco b:before{content:"";position:absolute;top:-18px;left:-5px;width:25px;height:21px;border-radius:80% 20% 80% 20%;background:#ed4d88;transform:rotate(-24deg);border:2px solid white}
+.hero-mouse-deco b:after{content:"";position:absolute;top:-18px;right:-5px;width:25px;height:21px;border-radius:20% 80% 20% 80%;background:#ed4d88;transform:rotate(24deg);border:2px solid white}
+.birthday-ribbon{display:inline-block;margin-top:18px;padding:11px 25px;background:linear-gradient(180deg,#e94e88,#c91e61);color:white;font-weight:900;letter-spacing:.12em;font-size:.78rem;transform:rotate(-1deg);box-shadow:0 8px 0 #8e1746,0 14px 25px #a329573d;border:2px solid #fff;border-radius:7px}
+.birthday-ribbon span{margin-left:8px}
+.love-letter{position:relative;isolation:isolate;overflow:hidden;max-width:1000px;margin:28px auto 35px;padding:clamp(25px,5vw,52px);text-align:center;border:3px solid #f2b4cd;border-radius:34px;background:linear-gradient(145deg,#fff 0%,#fff4f8 52%,#ffe1ed 100%);box-shadow:0 18px 0 #eab1c8,0 28px 55px #96365b24,inset 0 0 0 7px #fff,inset 0 0 0 9px #f8d1df}
+.love-letter:before,.love-letter:after{content:"";position:absolute;width:150px;height:150px;z-index:-1;opacity:.65;background:radial-gradient(circle,#d92f70 0 4px,transparent 5px);background-size:25px 25px}
+.love-letter:before{left:-45px;top:-42px}.love-letter:after{right:-45px;bottom:-45px}
+.letter-top{font-size:.78rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase;color:#b22d62}
+.letter-top span{font-size:1.4rem;vertical-align:middle;margin:0 8px}
+.love-letter h2{font-size:clamp(2rem,5vw,3.2rem);color:#97234f;margin:13px 0 22px;text-shadow:0 2px #fff}
+.poem{max-width:790px;margin:auto;color:#684453;font-family:Georgia,serif;font-size:clamp(.98rem,2vw,1.12rem);line-height:1.85}
+.letter-signoff{margin-top:26px;color:#a72a5c;font-family:Georgia,serif;font-style:italic;font-size:1.05rem}
+.letter-signoff span{color:#df3d7d}.letter-bow{font-size:2.4rem;margin-top:14px;filter:drop-shadow(0 5px 4px #b8336040)}
+.letter-sparkle{position:absolute;color:#e34b85;font-size:2rem;animation:twinkle 2.4s ease-in-out infinite}
+.sparkle-one{right:8%;top:12%}.sparkle-two{left:7%;bottom:10%;animation-delay:.8s}
+.topline{max-width:1280px}
+main{max-width:1320px}
+.months{grid-template-columns:repeat(auto-fit,minmax(min(100%,390px),1fr));gap:27px}
+.month{padding:19px;border:2px solid #f1bfd2;border-radius:27px;box-shadow:0 9px 0 #efc4d5,0 18px 35px #84345215,inset 0 0 0 4px #fff;transition:transform .35s,box-shadow .35s}
+.month:hover{transform:translateY(-7px) rotate(-.25deg);box-shadow:0 14px 0 #e9b3ca,0 27px 45px #84345225,inset 0 0 0 4px #fff}
+.month:after{content:"🎀";position:absolute;right:17px;bottom:10px;font-size:1.35rem;opacity:.55;pointer-events:none}
+.month h2{font-size:1.65rem}
+.slots{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.photo{aspect-ratio:4/3;border-radius:18px;border:2px solid #f5c8d9;box-shadow:0 5px 12px #8c31501a;transition:transform .3s,box-shadow .3s}
+.photo:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 12px 22px #8c31502a}
+.photo img{object-fit:contain;background:#fff7fa}
+.photo .date{font-size:.75rem;padding:6px 4px;background:#fffdf4ed}
+.extra-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.extra{padding:10px;border:2px solid #f1c1d3;border-radius:20px;box-shadow:0 7px 0 #efc7d6,0 14px 24px #80324a12;transition:transform .3s}
+.extra:hover{transform:translateY(-6px) rotate(.4deg)}
+.extra img{aspect-ratio:4/3;object-fit:contain;background:#fff7fa}
+.section-title{font-size:2.1rem;text-shadow:0 2px #fff}
+.section-title:after{content:" ♥";font-size:1rem;color:#e84c86}
+footer{background:linear-gradient(135deg,#ffe7f0,#fff1f6);font-size:.95rem}
+.reveal{opacity:0;transform:translateY(35px) scale(.985);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0) scale(1)}
+.month{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.month.in-view{opacity:1;transform:translateY(0)}
+@keyframes twinkle{0%,100%{transform:scale(.85) rotate(-8deg);opacity:.65}50%{transform:scale(1.18) rotate(10deg);opacity:1}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-9px) rotate(3deg)}}
+.hero-bow{display:inline-block;animation:bob 3s ease-in-out infinite}
+@media(max-width:650px){
+ .love-letter{margin:18px 12px 27px;padding:29px 18px;border-radius:25px}
+ .poem{font-size:.94rem;line-height:1.75}
+ .months{grid-template-columns:1fr;gap:20px}
+ .month{padding:15px}
+ .slots{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .photo{aspect-ratio:4/3}
+ .extra-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+ .extra{padding:7px}
+ .birthday-ribbon{font-size:.66rem;padding:10px 14px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal,.month{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -84,11 +148,56 @@ footer{text-align:center;color:#a17d8d;padding:26px 15px;font-size:.83rem;backgr
  </div>
 </section>
 <div id="site" class="hidden">
+
+ <section class="love-letter reveal">
+  <div class="letter-sparkle sparkle-one">✦</div><div class="letter-sparkle sparkle-two">♥</div>
+  <div class="letter-top"><span>🎀</span> ’n Briefie van Mamma <span>🎀</span></div>
+  <h2>Vir my liefste Joané</h2>
+  <div class="poem">
+   Voor jy gekom het, was my wêreld mooi en lig,<br>
+   maar toe ek jou ontmoet, het liefde ’n nuwe betekenis gekry in my sig.<br>
+   Ek was gelukkig, ja, maar jy het my hart laat verstaan:<br>
+   daar is ’n soort liefde wat vir altyd dieper as die oseane gaan.<br><br>
+   As die lewe jou ooit van my sou wegneem, my kind so klein,<br>
+   sou niks ooit weer dieselfde wees, geen sonskyn ooit so helder skyn.<br>
+   Want jy is my lag, my hoop, my rede om te glo,<br>
+   my kosbaarste geskenk, my mooiste wonder hier benede.<br><br>
+   Jy verdien die sterre, die maan, elke droom wat jy mag dra,<br>
+   alles waarna jou hart verlang, elke mooi ding op jou pad.<br>
+   Selfs op dae wat jy woel en woel, en mamma se geduld toets,<br>
+   sal ek jou nooit vir enigiets verruil nie — jy is my grootste soetste troos.<br><br>
+   Jy is slim en beeldskoon, so dapper en so sterk,<br>
+   met jou eie wil en jou stout glimlaggie — jy maak my wêreld merk.<br>
+   Jy is onafhanklik, chicky, met ’n vonkel in jou oog,<br>
+   en elke dag word jy ’n groter meisietjie voor my oë.<br><br>
+   Hoe kan dit wees, my lief, jy is vandag al een jaar oud?<br>
+   Die tyd het soos ’n sagte droom verbygevlieg, so vinnig en so goud.<br>
+   Ek sal enigiets gee om jou weer as pasgebore baba vas te hou,<br>
+   daardie klein lyfie teen my bors, daardie eerste oomblikke — net ek en jou.<br><br>
+   Tog sien ek uit na alles wat nog voor jou lê,<br>
+   na elke tree, elke ontdekking, elke nuwe woord wat jy sal sê.<br>
+   Ek wil jou sien groei, die wêreld leer ken en vrylik blom,<br>
+   en altyd langs jou stap, waar jou klein voetjies ook al kom.<br><br>
+   Mag jy altyd weet hoe diep en grensloos jy geliefd sal wees,<br>
+   dat jy nooit alleen sal loop, deur elke seisoen, elke fees.<br>
+   Engele hou wag oor jou vanuit die hemel se blou,<br>
+   en hier op aarde staan jou krygers — sterk en vas — om jou te beskerm en lief te hê, altyd by jou.<br><br>
+   Bly wie jy is, my meisiekind, met jou vuur en sagte hart,<br>
+   ek is trots op wie jy word, op elke nuwe deel van jou apart.<br>
+   Van baba tot klein dogtertjie, my liefde bly dieselfde, meer as ooit tevore:<br>
+   Jy is my wonder, my hele hart — my Joané, vir altyd en altyd, my liefste waarvoor ek lewe.
+  </div>
+  <div class="letter-signoff">Met al mamma se liefde, vir altyd <span>♥</span></div>
+  <div class="letter-bow">🎀</div>
+ </section>
+
  <header class="hero">
   <div class="hero-inner">
-   <div class="eyebrow"><span>●</span> Ons klein wonder <span>●</span></div>
+   <div class="eyebrow"><span>🎀</span> Ons klein wonder <span>🎀</span></div>
+   <div class="hero-mouse-deco" aria-hidden="true"><span>●</span><b>♥</b><span>●</span></div>
    <h1>Joané Mari Cockeran</h1>
    <p class="subtitle"><span class="hero-bow">🎀</span> 13 November 2025 · Haar eerste jaar · Ons groot liefde <span class="hero-bow">🎀</span></p>
+   <div class="birthday-ribbon">HAPPY 1ST BIRTHDAY, PRINCESS! <span>♥</span></div>
   </div>
  </header>
  <div class="topline"><span class="small">Haar eerste jaar • 6 foto’s per maand</span><button class="btn" id="lock">Sluit album</button></div>
@@ -125,6 +234,22 @@ function openLightbox(src){document.getElementById("largePhoto").src=src;documen
 document.getElementById("closeLightbox").onclick=()=>document.getElementById("lightbox").classList.remove("open");
 document.getElementById("lightbox").onclick=e=>{if(e.target.id==="lightbox")e.currentTarget.classList.remove("open")};
 function toast(msg){let t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2300)}
+
+// Scroll reveal: graceful fallback if IntersectionObserver is unavailable.
+if ("IntersectionObserver" in window) {
+ const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+   if (entry.isIntersecting) {
+    entry.target.classList.add(entry.target.classList.contains("month") ? "in-view" : "visible");
+    revealObserver.unobserve(entry.target);
+   }
+  });
+ }, {threshold:0.12, rootMargin:"0px 0px -35px 0px"});
+ document.querySelectorAll(".love-letter,.month").forEach(el=>revealObserver.observe(el));
+} else {
+ document.querySelectorAll(".love-letter,.month").forEach(el=>el.classList.add(el.classList.contains("month")?"in-view":"visible"));
+}
+
 </script>
 </body>
 </html>
