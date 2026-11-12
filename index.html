@@ -182,6 +182,23 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
 .floating-bows span:nth-child(4){--top:88%;--left:91%;--speed:8s;animation-delay:-3s}
 @media(max-width:650px){.floating-bows span:nth-child(2){left:90%}.floating-bows span:nth-child(4){left:88%}}
 
+
+/* A heartfelt thank-you at the end of the scrapbook */
+.village-thanks{position:relative;isolation:isolate;overflow:hidden;max-width:1080px;margin:72px auto 48px;padding:clamp(28px,5vw,58px) clamp(18px,5vw,58px);text-align:center;border:3px solid #efb5cd;border-radius:34px;background:radial-gradient(circle at 12% 18%,#fff 0 3px,transparent 4px),radial-gradient(circle at 88% 76%,#fff 0 4px,transparent 5px),linear-gradient(145deg,#fff 0%,#fff1f7 55%,#fbd5e4 100%);background-size:45px 45px,62px 62px,auto;box-shadow:0 16px 0 #e9b0c8,0 28px 60px #91345620,inset 0 0 0 7px #fff,inset 0 0 0 9px #f7d0df}
+.village-thanks:before,.village-thanks:after{content:"🎀";position:absolute;font-size:clamp(2.5rem,6vw,5rem);opacity:.18;z-index:-1;animation:bowDrift 6s ease-in-out infinite}
+.village-thanks:before{top:16px;left:18px;transform:rotate(-18deg)}
+.village-thanks:after{bottom:16px;right:18px;animation-delay:-2s}
+.thanks-kicker{display:inline-block;padding:9px 18px;border-radius:999px;background:#ffe0ec;color:#a42c5c;font-size:.8rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;box-shadow:inset 0 2px #fff}
+.village-thanks h2{margin:18px 0 8px;color:#94254f;font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;text-shadow:0 2px #fff}
+.thanks-intro{margin:0 0 28px;color:#c13e72;font-weight:800;letter-spacing:.04em}
+.thanks-poem{max-width:800px;margin:auto;color:#674352;font-family:Georgia,serif;font-size:clamp(.98rem,2vw,1.1rem);line-height:1.9}
+.thanks-signoff{margin-top:30px;color:#a52b5c;font-family:Georgia,serif;font-style:italic;font-size:1.08rem}
+.thanks-signoff span{color:#df3d7d}
+.thanks-bows{margin-top:15px;font-size:1.8rem;filter:drop-shadow(0 5px 4px #b8336040)}
+.thanks-sparkle{position:absolute;top:22px;right:8%;font-size:2rem;color:#e34b85;animation:twinkle 2.4s ease-in-out infinite}
+footer{margin-top:38px}
+@media(max-width:650px){.village-thanks{margin:48px 12px 35px;padding:30px 17px;border-radius:25px}.thanks-poem{font-size:.94rem;line-height:1.8}.thanks-intro{margin-bottom:20px}}
+
 </style>
 </head>
 <body>
@@ -257,9 +274,55 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opac
   <div class="section-intro"><span class="mini-bow">🎀</span><p>Maand vir maand, van haar eerste dag af. Elke foto hou ’n stukkie van haar storie.</p></div>
   <div class="months" id="months"></div>
   <h2 class="section-title"><span class="bow-icon">🎀</span> Nog Klein Herinneringe</h2>
-  <p class="section-note">Al die ekstra kosbare oomblikke wat nie in die ses maandelikse foto-plekke gepas het nie — en foto’s waarvan die datum nog onbekend is.</p>
+  <p class="section-note">Al die ekstra kosbare oomblikke wat nie in die maandelikse foto-plekke gepas het nie.</p>
   <div class="extra-grid" id="overflow"></div>
  </main>
+
+<section class="village-thanks reveal" id="my-village">
+ <div class="thanks-sparkle">✦</div>
+ <div class="thanks-kicker">🎀 My drie musketeers 🎀</div>
+ <h2>’n Hele dorpie in drie wonderlike mense</h2>
+ <p class="thanks-intro">Vir Mamma, Ouma en Joané se Peetma</p>
+ <div class="thanks-poem">
+  Hulle sê dit vat ’n hele dorpie om ’n kind groot te maak,<br>
+  maar my dorpie het drie wonderlike vroue — drie harte wat altyd oor ons waak.<br>
+  My Mamma, my Ouma en Joané se Peetma, altyd daar,<br>
+  my drie musketeers, deur elke seisoen, elke dag van die jaar.<br><br>
+
+  Deur elke tree, elke traan, elke onseker tyd,<br>
+  het julle langs ons bly staan, met liefde en met bereidwilligheid.<br>
+  Maak nie saak wat gebeur, of hoe moeilik dinge soms mag wees,<br>
+  julle weet net wat om te doen — julle verstaan sonder ’n woord te lees.<br><br>
+
+  Julle het my dogtertjie lief soos julle eie, met arms wyd oop,<br>
+  julle bederf haar, versorg haar, gee haar liefde en hoop.<br>
+  En dit is nie net die groot dinge wat julle vir haar doen,<br>
+  maar elke drukkie, elke laggie, elke klein oomblik saam — so kosbaar, soen vir soen.<br><br>
+
+  Ek weet nie waar ons vandag sou wees sonder julle aan ons sy,<br>
+  of hoe haar wêreld sou lyk as julle nie daar was om haar te koester en te lei.<br>
+  Julle is seëninge, Godgestuur, ’n geskenk wat ek nooit vanselfsprekend sal sien,<br>
+  en in Joané se lewe is julle liefde een van die mooiste dinge wat sy kon verdien.<br><br>
+
+  Ek wens “dankie” kon genoeg wees, maar die woord voel veels te klein,<br>
+  want hoe sê ’n mens dankie vir mense wat só deel van jou lewe en jou hart kan wees?<br>
+  Ek wens ek kon julle meer gee, op elke moontlike manier,<br>
+  om te wys hoe diep ek waardeer — elke opoffering, elke liefdevolle gebaar hier.<br><br>
+
+  Ek waardeer julle meer as wat woorde ooit kan sê,<br>
+  vir alles wat julle doen, en vir wie julle is, elke liewe dag daarmee.<br>
+  En ja, ek weet Joané gaan eendag grys hare vir julle gee,<br>
+  met haar sterk wil en stout maniere — maar ek kan nie wag om dit saam met julle te beleef nie!<br><br>
+
+  Want sy is ryker as wat sy ooit sal weet, met julle liefde om haar heen,<br>
+  en ek is dankbaar dat sy deur die lewe nie alleen hoef te gaan nie.<br>
+  Dankie dat julle my dorpie is, my veilige hawe, my mense, my krag,<br>
+  ons sal julle altyd liefhê — vandag, môre en elke dag daarna.
+ </div>
+ <div class="thanks-signoff">Met ’n hart vol dankbaarheid en liefde <span>♥</span></div>
+ <div class="thanks-bows" aria-hidden="true">🎀　♥　🎀</div>
+</section>
+
  <footer>Gemaak met baie liefde vir Joané Mari <span style="color:#d94f83">♥</span></footer>
 </div>
 <div id="lightbox"><button aria-label="Maak toe" id="closeLightbox">×</button><img alt="Joané se herinnering" id="largePhoto"></div>
