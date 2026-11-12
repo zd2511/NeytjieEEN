@@ -133,6 +133,55 @@ footer{background:linear-gradient(135deg,#ffe7f0,#fff1f6);font-size:.95rem}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal,.month{opacity:1;transform:none}}
 
+
+/* Extra Minnie Mouse birthday magic */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.16;background-image:
+ radial-gradient(circle at 50% 50%,#d72e70 0 4px,transparent 4.8px),
+ radial-gradient(circle at 50% 50%,#d72e70 0 4px,transparent 4.8px);
+ background-size:74px 74px,119px 119px;background-position:0 0,31px 37px}
+#site{position:relative;z-index:1}
+.hero{position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;left:5%;top:14%;width:84px;height:84px;border-radius:50%;background:#252027;box-shadow:68px 2px 0 -1px #252027,34px 43px 0 -7px #ed4a87;opacity:.12;transform:rotate(-12deg);animation:earFloat 7s ease-in-out infinite}
+.hero:after{pointer-events:none}
+.hero-inner{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 17px;border:1px solid #fff9;border-radius:999px;background:#fff8;box-shadow:0 5px 15px #a02d541c}
+.month{position:relative;overflow:hidden;background:linear-gradient(145deg,#fff 0%,#fff8fb 65%,#ffedf4 100%)}
+.month:before{content:"";position:absolute;top:-24px;left:-20px;width:80px;height:80px;border-radius:50%;background:#f7c2d7;opacity:.26;box-shadow:42px 1px 0 -15px #d72e70,20px 38px 0 -20px #d72e70;pointer-events:none}
+.month-head{position:relative;z-index:1}
+.month h2:before{content:"🎀";display:inline-block;margin-right:9px;font-size:.82em;vertical-align:middle;filter:drop-shadow(0 3px 2px #d72e7030)}
+.month .ordinal{color:#b23b68}
+.photo{position:relative;overflow:hidden;background:#fff}
+.photo:after,.extra:after{content:"";position:absolute;inset:0;border:5px solid #fff;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 1px #efb4cb}
+.photo img,.extra img{transition:transform .55s cubic-bezier(.2,.75,.25,1),filter .55s}
+.photo:hover img,.extra:hover img{transform:scale(1.045);filter:saturate(1.06)}
+.photo.empty{background:repeating-linear-gradient(135deg,#fff5f9,#fff5f9 12px,#ffe8f1 12px,#ffe8f1 24px);border:2px dashed #e99abb}
+.extra{position:relative;overflow:hidden;background:linear-gradient(145deg,#fff,#fff1f7);transform-style:preserve-3d}
+.extra:nth-child(3n+1){transform:rotate(-1deg)}
+.extra:nth-child(3n+2){transform:rotate(1deg)}
+.extra:hover{transform:translateY(-9px) rotate(0) scale(1.025)}
+.section-title{position:relative;display:flex;align-items:center;gap:10px}
+.section-title:before{content:"";height:3px;flex:1;max-width:65px;border-radius:9px;background:linear-gradient(90deg,#ef9cbd,#d52f70)}
+.section-title:after{content:"♥";font-size:1.25rem;color:#e34b86}
+.section-note{max-width:760px}
+.love-letter{transform-style:preserve-3d}
+.love-letter:hover{box-shadow:0 20px 0 #eab1c8,0 34px 65px #96365b2d,inset 0 0 0 7px #fff,inset 0 0 0 9px #f8d1df}
+.letter-top{display:inline-block;padding:8px 16px;border-radius:999px;background:#ffe1ec;box-shadow:inset 0 2px #fff}
+#lightbox{backdrop-filter:blur(12px)}
+#largePhoto{box-shadow:0 22px 65px #2d1025a6;border:8px solid white;border-radius:12px}
+@keyframes earFloat{0%,100%{transform:translateY(0) rotate(-12deg)}50%{transform:translateY(13px) rotate(-5deg)}}
+@keyframes bowDrift{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-12px) rotate(5deg)}}
+@media(hover:hover){.birthday-ribbon:hover{transform:translateY(-3px) rotate(1deg);box-shadow:0 11px 0 #8e1746,0 19px 30px #a3295745}}
+@media(max-width:650px){.month h2:before{font-size:.75em}.section-title{font-size:1.65rem}.section-title:before{max-width:28px}}
+
+
+.floating-bows{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
+.floating-bows span{position:absolute;top:var(--top,18%);left:var(--left,4%);font-size:clamp(18px,2.4vw,30px);opacity:.18;filter:drop-shadow(0 5px 5px #b72d5a30);animation:bowDrift var(--speed,6s) ease-in-out infinite}
+.floating-bows span:nth-child(1){--top:17%;--left:3%;--speed:6.5s}
+.floating-bows span:nth-child(2){--top:47%;--left:94%;--speed:7.5s;animation-delay:-2s}
+.floating-bows span:nth-child(3){--top:78%;--left:5%;--speed:5.5s;animation-delay:-1s}
+.floating-bows span:nth-child(4){--top:88%;--left:91%;--speed:8s;animation-delay:-3s}
+@media(max-width:650px){.floating-bows span:nth-child(2){left:90%}.floating-bows span:nth-child(4){left:88%}}
+
 </style>
 </head>
 <body>
@@ -148,6 +197,9 @@ footer{background:linear-gradient(135deg,#ffe7f0,#fff1f6);font-size:.95rem}
  </div>
 </section>
 <div id="site" class="hidden">
+
+<div class="floating-bows" aria-hidden="true"><span>🎀</span><span>🎀</span><span>♥</span><span>🎀</span></div>
+
 
  <section class="love-letter reveal">
   <div class="letter-sparkle sparkle-one">✦</div><div class="letter-sparkle sparkle-two">♥</div>
@@ -200,7 +252,7 @@ footer{background:linear-gradient(135deg,#ffe7f0,#fff1f6);font-size:.95rem}
    <div class="birthday-ribbon">HAPPY 1ST BIRTHDAY, PRINCESS! <span>♥</span></div>
   </div>
  </header>
- <div class="topline"><span class="small">Haar eerste jaar • 6 foto’s per maand</span><button class="btn" id="lock">Sluit album</button></div>
+ <div class="topline"><span class="small">Haar eerste jaar</span><button class="btn" id="lock">Sluit album</button></div>
  <main>
   <div class="section-intro"><span class="mini-bow">🎀</span><p>Maand vir maand, van haar eerste dag af. Elke foto hou ’n stukkie van haar storie.</p></div>
   <div class="months" id="months"></div>
@@ -224,9 +276,9 @@ if(sessionStorage.getItem("joane-album-open")==="yes")unlock();
 document.getElementById("lock").onclick=()=>{sessionStorage.removeItem("joane-album-open");site.classList.add("hidden");gate.classList.remove("hidden");document.getElementById("password").value=""};
 const fmt=d=>{if(!d)return "Datum onbekend";let [y,m,day]=d.split("-");return `${Number(day)} ${["","Januarie","Februarie","Maart","April","Mei","Junie","Julie","Augustus","September","Oktober","November","Desember"][Number(m)]} ${y}`};
 function photoCard(src,date,alt){let div=document.createElement("div");div.className="photo";let img=document.createElement("img");img.src=src;img.alt=alt||"Joané se foto";img.loading="lazy";img.onclick=()=>openLightbox(src);div.append(img);let cap=document.createElement("div");cap.className="date";cap.textContent=fmt(date);div.append(cap);return div}
-function extraCard(p,label){let div=document.createElement("div");div.className="extra";let img=document.createElement("img");img.src=p.file;img.loading="lazy";img.alt="Joané se foto";img.onclick=()=>openLightbox(p.file);let cap=document.createElement("div");cap.className="caption";cap.textContent=(label?label+" • ":"")+fmt(p.date);div.append(img,cap);return div}
+function extraCard(p,label){let div=document.createElement("div");div.className="extra";let img=document.createElement("img");img.src=p.file;img.loading="lazy";img.alt="Joané se foto";img.onclick=()=>openLightbox(p.file);div.append(img);return div}
 const months=document.getElementById("months");
-MONTHS.forEach((m,i)=>{let card=document.createElement("section");card.className="month";let head=document.createElement("div");head.className="month-head";let title=document.createElement("div");let h=document.createElement("h2");h.textContent=m.label;let ordinal=document.createElement("div");ordinal.className="ordinal";ordinal.textContent=m.ordinal;title.append(h,ordinal);let count=document.createElement("span");count.className="count";count.textContent=m.photos.length+" / 6 foto’s";head.append(title,count);let grid=document.createElement("div");grid.className="slots";
+MONTHS.forEach((m,i)=>{let card=document.createElement("section");card.className="month";let head=document.createElement("div");head.className="month-head";let title=document.createElement("div");let h=document.createElement("h2");h.textContent=m.label;let ordinal=document.createElement("div");ordinal.className="ordinal";ordinal.textContent=m.ordinal;title.append(h,ordinal);head.append(title);let grid=document.createElement("div");grid.className="slots";
 for(let s=0;s<6;s++){if(m.photos[s])grid.append(photoCard(m.photos[s].file,m.photos[s].date,"Joané • "+fmt(m.photos[s].date)));else{let lab=document.createElement("label");lab.className="photo empty";lab.innerHTML='<span>＋<small>Voeg foto by</small></span>';let input=document.createElement("input");input.type="file";input.accept="image/*";input.hidden=true;lab.append(input);input.addEventListener("change",()=>{let f=input.files[0];if(!f)return;let reader=new FileReader();reader.onload=()=>{try{let saved=JSON.parse(localStorage.getItem(storeKey)||"{}");saved[i+"-"+s]=reader.result;localStorage.setItem(storeKey,JSON.stringify(saved));let img=document.createElement("img");img.src=reader.result;lab.classList.remove("empty");lab.innerHTML="";lab.append(img);toast("Foto bygevoeg op hierdie toestel! 💗")}catch{toast("Die foto is te groot vir hierdie toestel se stoorplek.")}};reader.readAsDataURL(f)});lab.onclick=()=>input.click();grid.append(lab)}}
 card.append(head,grid);months.append(card)});
 OVERFLOW.forEach(p=>document.getElementById("overflow").append(extraCard(p,p.monthLabel||"")));
