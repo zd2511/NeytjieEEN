@@ -360,9 +360,9 @@ if ("IntersectionObserver" in window) {
    }
   });
  }, {threshold:0.12, rootMargin:"0px 0px -35px 0px"});
- document.querySelectorAll(".love-letter,.month").forEach(el=>revealObserver.observe(el));
+ document.querySelectorAll(".love-letter,.month,.village-thanks").forEach(el=>revealObserver.observe(el));
 } else {
- document.querySelectorAll(".love-letter,.month").forEach(el=>el.classList.add(el.classList.contains("month")?"in-view":"visible"));
+ document.querySelectorAll(".love-letter,.month,.village-thanks").forEach(el=>el.classList.add(el.classList.contains("month")?"in-view":"visible"));
 }
 
 </script>
